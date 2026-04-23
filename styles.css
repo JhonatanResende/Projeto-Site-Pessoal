@@ -1,0 +1,346 @@
+:root{
+    --primary-color: #3c3c3c;
+    --secondary-color: #ffffff;
+    --highlight-color: #ff9e44;
+    --darker-background: #222222;
+    --border-radius-base: 8px;
+}
+
+
+*{
+    font-family: "Rubik", sans-serif;
+        box-sizing: border-box;
+}
+
+
+section{
+    min-height: 100vh;
+}
+
+/* NAV */
+nav{
+    background-color: #EDEDED;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    padding: 14px 63px;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px #00000025;
+}
+
+nav img{
+    width: 3rem;
+    height: 3rem;
+}
+
+#navBarLinks{
+    display: flex;
+    gap: 40px;
+}
+
+#navBarLinks li{
+    list-style: none;
+}
+
+#navBarLinks a{
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* TITLES */
+.title{
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+/* HOME */
+#homeSection{
+    background-color: var(--darker-background);
+    padding-top: 65px;
+    display: flex;
+}
+
+#homeSection h1{
+    color: var(--secondary-color);
+}
+
+#homeSection h2{
+    color: #B6B6B6;
+    font-weight: 400;
+    font-size: 2.4rem;
+    padding: 24px 0 64px;
+}
+
+#homeContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+#homePhoto{
+    background-image: url(assets/photos/img_home.jpeg);
+    background-size: cover;
+    width: 40%;
+    height: calc(100vh - 65px);
+    background-position: center;
+}
+
+/* ABOUT */
+#aboutSection{
+    background-color: var(--highlight-color);
+    display: flex;
+}
+
+#aboutMeTextsFlexContainer{
+    padding-top: 65px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutMeTextsFlexItem{
+    width: 80%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+#aboutSection p{
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+    line-height: 2.4rem;
+    padding: 45px 0 56px;
+}
+
+#aboutMePhoto{
+    background-image: url(assets/photos/img_sobre.jpg);
+    width: 40%;
+    background-size: cover;
+}
+
+/* SKILLS */
+#skillsSection{
+    background-image: url(assets/photos/img_skills.jpg);
+    background-size: cover;
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff70;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay h1{
+    color: var(--primary-color);
+    padding-bottom: 68px;
+}
+
+.overlay ul{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    gap: 27px;
+    justify-content: center;
+    padding-bottom: 68px;
+}
+
+.overlay li{
+    background-color: #00000039;
+    padding: 12px 17px;
+    border-radius: var(--border-radius-base);
+    color: var(--secondary-color);
+    font-size: 1.93rem;
+}
+
+/* CONTACT */
+#contactSection{
+    background-color: #2343e3;
+    display: flex;
+}
+
+#contactTextsContainer{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contactTextsChild{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 700px;
+}
+
+#contactSection h1{
+    padding-bottom: 60px;
+    text-decoration: underline;
+}
+
+#contactSection p{
+    color: var(--secondary-color);
+    font-size: 1.56rem;
+}
+
+#contactPhoto{
+    background-image: url(assets/photos/img_contato.jpg);
+    width: 40%;
+    height: 100vh;
+    background-size: cover;
+}
+
+/* BUTTON */
+.defaulButton{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: var(--border-radius-base);
+    cursor: pointer;
+    color: var(--secondary-color);
+    gap: 10px;
+}
+
+.defaulButton a{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.downloadButtonLight{
+    background-color: var(--highlight-color);
+}
+
+.downloadButtonDark{
+    background-color: var(--primary-color);
+}
+
+.linkedinButton{
+    background-color: #FEAF67;
+    padding: 14px;
+}
+
+/* EMAIL */
+.emailContainer{
+    padding-top: 40px;
+    padding-bottom: 100px;
+    font-style: normal;
+}
+
+.emailContainer .contactItem{
+    display: flex;
+}
+
+.emailContainer p{
+    padding-left: 14px;
+}
+
+.emailIcon{
+    width: 32px;
+}
+
+/* SOCIAL */
+.socialMedia{
+    display: flex;
+    gap: 1rem;
+}
+
+.socialMedia a{
+    background-color: #3756F3;
+    padding: 12px;
+    border-radius: var(--border-radius-base);
+}
+
+.socialMedia img{
+    height: 28px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1200px){
+    #aboutMeTextsFlexItem .defaulButton{
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width:1080px){
+    #homeTexts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #homeSection h1{
+        text-align: center;
+    }
+}
+
+@media (max-width: 780px){
+
+    nav{
+        display: none;
+    }
+
+    #homeSection,
+    #aboutSection,
+    #contactSection{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #homeSection h2{
+        font-size: 1.7rem;
+    }
+
+    #homePhoto{
+        width: 80%;
+        max-width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+    }
+
+    #homeTexts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #aboutMePhoto,
+    #contactPhoto{
+        display: none;
+    }
+
+    #aboutMeTextsFlexContainer,
+    #contactTextsContainer{
+        width: 100%;
+    }
+
+    #contactTextsChild{
+        align-items: center;
+    }
+
+    .defaulButton{
+        margin-bottom: 20px;
+    }
+
+    #contactSection h1{
+        text-align: center;
+    }
+
+    #contactSection p{
+        text-align: justify;
+    }
+}
